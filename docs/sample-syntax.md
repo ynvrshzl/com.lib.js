@@ -11,5 +11,5 @@ element.classList.add('');
 After: 
 
 ```js
-Lib.HTML.Build('div').style('padding: 5px').css('')
+new Lib.HTML.Build('div').style('padding: 5px').css('')
 ```

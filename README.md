@@ -1,4 +1,3 @@
-# com.lib.js
-Personal local library and grammar interface experiments for ergonomic web development.
+0.0.0 alpha branch prototype version of grammatica/com.lib.js
 
-Read the [Sample syntax](docs/sample-syntax.md) to get an idea of how this library works, and see if it works for you. Read the [Research (coming soon...)](#)
+This branch features the most basic implementation tests of the library.

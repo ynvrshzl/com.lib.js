@@ -7,21 +7,37 @@ export class HTML {
     constructor(tag) {
         this.init(tag);
     }
-
-    /** Standard HTML class method for returning class this */
-    continue(){
-        return this;
-    }
-
     /* Initializing method of the class. */
     init(tag) {
         this.HTMLSourceElement = document.createElement(tag);
+        return this;
+    }
+
+    /** 
+     * Title:         -
+     * Type:          - 
+     * Class:         -
+     * Category:      app
+     * Wraps:         'document.appendChild(element)'
+     * Description:   - 
+     * Behavior:      you may use this command without supplying 'selector', in this case, default behavior always adds the element to the 'HTML \<body\>' 
+     */
+    attach(selector){
+
+        // see 'behavior'
+        if (!selector){
+            document.body.appendChild(this.HTMLSourceElement);
+        // see 'behavior'
+        } else {
+            document.body.querySelector(selector).appendChild(this.HTMLSourceElement);
+        }
+        return this;
     }
 
     /** Text string for html. Underlying implements "textContent" */
-    text(string) {
+    t(string) {
         this.HTMLSourceElement.textContent = string
-        this.continue()
+        return this
     }
 
     /** 
@@ -29,7 +45,7 @@ export class HTML {
      * schema: must be comma-separated */
     css(Classnames) {
         this.HTMLSourceElement.classList.add([...Classnames])
-        this.continue();
+        return this;
     }
 
     /** 
@@ -37,12 +53,17 @@ export class HTML {
      * schema: any string */
     inlinecss(Stylestring) {
         this.HTMLSourceElement.style.cssText = Stylestring
-        this.continue();
+        return this;
     }
     
     /** Log this element chain to the console */
     log() {
-        this.continue();
+        console.group('grammatica+com.lib.js:')
+        // log self
+        console.log(this)
+        console.groupEnd()
+
+        return this;
     }
 
     /** Chain, group or insert. Note that this method uses javascript's standard "appendChild" DOM method, meaning only valid HTML elements will be accepted.  */
@@ -64,6 +85,6 @@ export class HTML {
 
         // End loop
         });
-        this.continue();
+        return this;
     }
 };

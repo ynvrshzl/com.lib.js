@@ -1,0 +1,1 @@
+import './prototype/0.0.0/tests/main.js';

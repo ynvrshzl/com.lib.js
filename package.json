@@ -1,0 +1,26 @@
+{
+  "name": "com.lib",
+  "version": "0.0.0",
+  "description": "Experimental library",
+  "main": "test.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "npx live-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ynvrshzl/com.lib.js.git"
+  },
+  "keywords": [
+    "keyword"
+  ],
+  "author": "hazl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ynvrshzl/com.lib.js/issues"
+  },
+  "homepage": "https://github.com/ynvrshzl/com.lib.js#readme"
+}
